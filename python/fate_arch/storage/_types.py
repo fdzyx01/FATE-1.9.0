@@ -28,6 +28,7 @@ class StorageEngine(object):
     EGGROLL = 'EGGROLL'
     HDFS = 'HDFS'
     MYSQL = 'MYSQL'
+    DM8 = 'DM8'
     SIMPLE = 'SIMPLE'
     PATH = 'PATH'
     HIVE = 'HIVE'
@@ -80,6 +81,13 @@ class MySQLStoreType(object):
     MyISAM = "MyISAM"
     ISAM = "ISAM"
     HEAP = "HEAP"
+    DEFAULT = None
+
+
+class DM8StoreType(object):
+    OLTP = "OLTP"
+    OLAP = "OLAP"
+    MIX = "MIX"
     DEFAULT = None
 
 

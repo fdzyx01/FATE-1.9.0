@@ -142,6 +142,30 @@ class MysqlAddress(AddressBase):
         return {"user": self.user, "passwd": self.passwd, "host": self.host, "port": self.port, "db": self.db}
 
 
+class DM8Address(AddressBase):
+    def __init__(self, user=None, passwd=None, host=None, port=None, name=None, connector_name=None):
+        self.user = user
+        self.passwd = passwd
+        self.host = host
+        self.port = port
+        self.name = name
+        self.connector_name = connector_name
+        super(DM8Address, self).__init__(connector_name=connector_name)
+
+    def __hash__(self):
+        return (self.host, self.port, self.name).__hash__()
+
+    def __str__(self):
+        return f"DM8Address(name={self.name})"
+
+    def __repr__(self):
+        return self.__str__()
+
+    @property
+    def connector(self):
+        return {"user": self.user, "passwd": self.passwd, "host": self.host, "port": self.port}
+
+
 class HiveAddress(AddressBase):
     def __init__(self, host=None, name=None, port=10000, username=None, database='default', auth_mechanism='PLAIN',
                  password=None, connector_name=None):

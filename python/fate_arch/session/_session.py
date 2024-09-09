@@ -255,6 +255,10 @@ class Session(object):
             from fate_arch.storage.mysql import StorageSession
             storage_session = StorageSession(session_id=storage_session_id, options=kwargs.get("options", {}))
 
+        elif storage_engine == StorageEngine.DM8:
+            from fate_arch.storage.dm8 import StorageSession
+            storage_session = StorageSession(session_id=storage_session_id, options=kwargs.get("options", {}))
+
         elif storage_engine == StorageEngine.HDFS:
             from fate_arch.storage.hdfs import StorageSession
             storage_session = StorageSession(session_id=storage_session_id, options=kwargs.get("options", {}))

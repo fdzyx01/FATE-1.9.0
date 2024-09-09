@@ -1,6 +1,6 @@
 from fate_arch.storage._types import StorageTableMetaType, StorageEngine
 from fate_arch.storage._types import StandaloneStoreType, EggRollStoreType, \
-    HDFSStoreType, MySQLStoreType,  \
+    HDFSStoreType, MySQLStoreType, DM8StoreType, \
     PathStoreType, HiveStoreType, LinkisHiveStoreType, LocalFSStoreType, ApiStoreType
 from fate_arch.storage._types import DEFAULT_ID_DELIMITER, StorageTableOrigin
 from fate_arch.storage._session import StorageSessionBase
