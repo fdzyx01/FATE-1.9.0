@@ -57,8 +57,8 @@ def table_bind():
     extra_schema = request_data.get("schema", {})
     address = storage.StorageTableMeta.create_address(storage_engine=engine, address_dict=address_dict)
     in_serialized = request_data.get("in_serialized", 1 if engine in {storage.StorageEngine.STANDALONE, storage.StorageEngine.EGGROLL,
-                                                                      storage.StorageEngine.MYSQL, storage.StorageEngine.PATH,
-                                                                      storage.StorageEngine.API} else 0)
+                                                                      storage.StorageEngine.MYSQL, storage.StorageEngine.DM8,
+                                                                      storage.StorageEngine.PATH, storage.StorageEngine.API} else 0)
     destroy = (int(request_data.get("drop", 0)) == 1)
     data_table_meta = storage.StorageTableMeta(name=name, namespace=namespace)
     if data_table_meta:
