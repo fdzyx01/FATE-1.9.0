@@ -1,0 +1,18 @@
+mkdocs-material
+mkdocs-jupyter
+ipython_genutils
+python-markdown-math
+mkdocs-static-i18n
+mkdocstrings
+mkdocstrings-python-legacy
+pytkdocs[numpy-style]
+mkdocs-simple-hooks
+mkdocs-awesome-pages-plugin
+mkdocs-git-revision-date-plugin
+GitPython
+
+
+# for FATE api generate
+peewee
+cachetools
+ruamel.yaml
